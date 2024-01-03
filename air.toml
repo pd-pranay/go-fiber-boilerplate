@@ -1,0 +1,28 @@
+# air.toml
+
+# . = look for .air.toml or .air.yml or .air.yaml or air.toml or air.yml or air.yaml in current directory and its parents
+
+[build]
+# ignored watching paths, relative to current working directory
+ignore = ["^tmp", "^vendor", "^node_modules", "\\.log$", "\\.swp$"]
+
+# extra paths to watch, relative to current working directory
+include = ["^configs", "\\.tmpl$"]
+
+# any extra extensions to watch
+extensions = ["go", "tmpl"]
+
+env = { APP_ENV = "dev", dbEngine = "postgres", dbUser = "admin", dbPassword = "password", dbName = "user", dbHost = "postgres", dbSSLMode = "disable", dbPort = "5432" }
+
+[run]
+# the `-name` flag, the default value is `air`
+name = "air"
+
+# ignored watching paths, relative to current working directory
+ignore = ["^tmp", "^vendor", "^node_modules", "\\.log$", "\\.swp$"]
+
+# any extra extensions to watch
+extensions = ["go", "tmpl"]
+
+env = { APP_ENV = "dev", dbEngine = "postgres", dbUser = "admin", dbPassword = "password", dbName = "user", dbHost = "postgres", dbSSLMode = "disable", dbPort = "5432" }
+# environment variable, obviously.
